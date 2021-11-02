@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Forms\Places-user-identity-icon.png" />
+    <None Remove="Images\icons\business.png" />
+    <None Remove="Images\icons\document.png" />
+    <None Remove="Images\icons\dolist.png" />
+    <None Remove="Images\icons\file.png" />
+    <None Remove="Images\icons\list.png" />
+    <None Remove="Images\icons\logout.png" />
+    <None Remove="Images\icons\profit.png" />
+    <None Remove="Images\icons\report.png" />
+    <None Remove="Images\icons\reports.png" />
+    <None Remove="Images\icons\team.png" />
+    <None Remove="Images\ListImage\altpencere.png" />
+    <None Remove="Images\ListImage\altpencere2.png" />
+    <None Remove="Images\ListImage\altpencere21.png" />
+    <None Remove="Images\ListImage\altpencere211.png" />
+    <None Remove="Images\ListImage\image.jpg" />
+    <None Remove="Images\ListImage\images.jpg" />
+    <None Remove="Images\ListImage\imagess.jpg" />
+    <None Remove="Images\ListImage\logo.png" />
+    <None Remove="Images\ListImage\ustpenceres.png" />
+    <None Remove="Images\UserImages\home.png" />
+    <None Remove="Images\UserImages\user2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\icons\document.png" />
+    <Resource Include="Images\icons\logout.png" />
+    <Resource Include="Images\icons\profit.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="2.0.3" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Raporlama.Business\Raporlama.Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\icons\business.png" />
+    <Resource Include="Images\icons\dolist.png" />
+    <Resource Include="Images\icons\file.png" />
+    <Resource Include="Images\icons\list.png" />
+    <Resource Include="Images\icons\report.png" />
+    <Resource Include="Images\icons\reports.png" />
+    <Resource Include="Images\icons\team.png" />
+    <Resource Include="Images\ListImage\altpencere.png" />
+    <Resource Include="Images\ListImage\altpencere2.png" />
+    <Resource Include="Images\ListImage\altpencere21.png" />
+    <Resource Include="Images\ListImage\altpencere211.png" />
+    <Resource Include="Images\ListImage\image.jpg" />
+    <Resource Include="Images\ListImage\images.jpg" />
+    <Resource Include="Images\ListImage\imagess.jpg" />
+    <Resource Include="Images\ListImage\logo.png" />
+    <Resource Include="Images\ListImage\ustpenceres.png" />
+    <Resource Include="Images\UserImages\home.png" />
+    <Resource Include="Images\UserImages\user2.png" />
+    <Resource Include="Images\UserImages\user1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Proportites\" />
+  </ItemGroup>
+
+</Project>

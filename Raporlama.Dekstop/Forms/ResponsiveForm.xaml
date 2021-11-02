@@ -1,0 +1,39 @@
+﻿<Window x:Class="Raporlama.Desktop.Forms.ResponsiveForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Raporlama.Desktop.Forms"
+        mc:Ignorable="d"
+        Title="Rapor Listesi" Background="#04c582" Height="463" Width="631" WindowStartupLocation="CenterScreen">
+
+    <Grid Height="436" VerticalAlignment="Top" Margin="0,10,0,0">
+
+        <Rectangle Grid.Row="0" Margin="0,0,0,361" Fill="#545d6a" Height="75"/>
+        <WrapPanel x:Name="wp" Grid.Row="1" Margin="0,0,0,250" Orientation="Horizontal">
+            <Button Content="Muhasebe" Background="LightCyan" Margin="10,8,0,100" HorizontalAlignment="Stretch" FontSize="20"  VerticalAlignment="Stretch" Height="50" Width="142" Click="btnMuhasebe_click"  Grid.RowSpan="1"/>
+            <Button Content="Finans" Background="LightCyan" Margin="10,8,0,100" HorizontalAlignment="Stretch" FontSize="20"  VerticalAlignment="Stretch" Height="50" Width="142" Click="btnFinans_click"  Grid.RowSpan="2"/>
+            <Button Content="Satın Alma" Background="LightCyan" Margin="10,8,0,100" HorizontalAlignment="Stretch" FontSize="20" VerticalAlignment="Stretch" Height="50" Width="141" Click="btnSatinAlma_click" Grid.RowSpan="3"/>
+            <Button Content="Satış" Background="LightCyan" Margin="10,8,0,100" HorizontalAlignment="Stretch" FontSize="20"  VerticalAlignment="Stretch" Height="50" Width="141" Click="btnSatis_click"/>
+            <Grid HorizontalAlignment="Stretch"/>
+
+
+        </WrapPanel>
+
+        <StackPanel Margin="0,100,0,125" RenderTransformOrigin="0.500,0.6">
+            <DataGrid x:Name="dtgReport" FontSize="20" SelectionMode="Single" AutoGenerateColumns="False" AlternatingRowBackground="Azure" Height="204" SelectionChanged="dtgReport_SelectionChanged" Width="543" FontFamily="Impact">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id}" Header="Rapor Id" IsReadOnly="True" Width="200" FontFamily="Impact"/>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="Rapor Adı" IsReadOnly="True" Width="200" FontFamily="Impact"/>
+                    <DataGridTextColumn Binding="{Binding ReportType.Name}" Header="Rapor Türü" IsReadOnly="True" Width="200" FontFamily="Impact"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+
+        <Button Content="Çıkış" Background="LightCyan" Margin="32,311,490,89" FontSize="20" Click="btnLogout_click" />
+        <Rectangle Margin="0,352,0,9" Fill="#545d6a"/>
+    </Grid>
+
+</Window>

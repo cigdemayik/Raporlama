@@ -1,0 +1,208 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="using:XAML_SearchBox"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Raporlama.Desktop.Forms.ListForm"
+        mc:Ignorable="d"
+        Title="ListForm" Height="654" Width="1038" Background="white" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="Manual" WindowStyle="none">
+    <Grid x:Name="grd_main">
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="10" Direction="200" Color="#FF103DB9"/>
+        </Grid.Effect>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="170"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220" x:Name="grd_column"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--Logo-->
+        <Border Background="#134187" Grid.Column="0" Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Background="White" Grid.Row="0">
+                    <DockPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="/Images/ListImage/logo.png" Height="40" Width="232" x:Name="lbl_logo"/>
+                    </DockPanel>
+                </Border>
+                <Border Grid.Row="1">
+                    <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="btn_hamburgermenu"
+                               MouseDown="btn_hamburgermenuMousedown" >
+
+                        <Image Height="80" Width="75">
+                            <Image.Style>
+                                <Style TargetType="{x:Type Image}">
+                                    <Setter Property="Source" Value="file:///C:/Users/ÇİĞDEM/Source/Repos/Raporlama/Raporlama.Dekstop/Images/icons/reports.png"/>
+                                    <Setter Property="Width" Value="auto"/>
+                                    <Setter Property="Height" Value="80"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Source" Value="/Images/icons/reports.png"/>
+                                            <Setter Property="Width" Value="100"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </DockPanel>
+                </Border>
+            </Grid>
+        </Border>
+        <Border Background="#134187" Grid.Column="1" Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Background="White" Grid.Row="0">
+                    <DockPanel Width="300" HorizontalAlignment="Right">
+                        <Image Source="/Images/icons/document.png" Height="30" Width="30"/>
+                        <Label Content="Rapor Listesi" Foreground="#134187" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="20" VerticalContentAlignment="Top" x:Name="lbl_logoyazii" Width="157" Height="39"/>
+                        <Button Content="_" x:Name="btn_min" Click="btn_min_Click" Style="{DynamicResource miniButtonlar}" FontSize="12" Width="37" Background="{x:Null}">
+                            <Button.Effect>
+                                <DropShadowEffect Color="#FF134187" Direction="100" BlurRadius="15" Opacity="0.8"/>
+                            </Button.Effect>
+                        </Button>
+                        <Button Content="| |" x:Name="btn_max" Click="btn_max_Click" Style="{DynamicResource miniButtonlar}" FontSize="12"  Background="{x:Null}" Width="37">
+                            <Button.Effect>
+                                <DropShadowEffect Color="#FF134187" Direction="100" BlurRadius="15" Opacity="0.8"/>
+                            </Button.Effect>
+                        </Button>
+                        <Button Content="X" x:Name="btn_close" Click="btn_close_Click" Style="{DynamicResource miniButtonlar}" FontSize="12" Background="{x:Null}">
+                            <Button.Effect>
+                                <DropShadowEffect Direction="100" Color="#FF134187" BlurRadius="15" Opacity="0.8"/>
+                            </Button.Effect>
+                        </Button>
+                    </DockPanel>
+                </Border>
+                <Border Grid.Row="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0">
+                            <Border Grid.Column="1" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                <Border.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-360.339"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Border.RenderTransform>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="25,10,0,0"> 
+                                    <Image Source="C:\Users\ÇİĞDEM\Source\Repos\Raporlama\Raporlama.Dekstop\Images\UserImages\user2.png"  Height="80" Width="80" RenderTransformOrigin="-0.72,0.935"/>
+                                    <StackPanel Width="165">
+                                        <Label Content="Hoşgeldiniz" HorizontalAlignment="Right" Foreground="White" Margin="0,20,30,0" FontSize="20" FontWeight="DemiBold"/>
+                                        <TextBlock Text="Kullanıcı Adı" x:Name="lblUser" Foreground="White" Margin="0,0,30,20" FontSize="18" Width="70"/>
+                                    </StackPanel>
+                                    </StackPanel>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="C:\Users\ÇİĞDEM\Source\Repos\Raporlama\Raporlama.Dekstop\Images\ListImage\altpencere211.png"/>
+                                </Border.Background>
+                            </Border>
+                        </Border>
+                        <Border Grid.Column="1">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Images/ListImage/altpencere21.png"/>
+                            </Border.Background>
+                            <Border Height="120" CornerRadius="10,10,10,10" Margin="0,8,0,0" HorizontalAlignment="Right">
+
+                                <Button Height="44" Background="{x:Null}"  x:Name="btn_Logout" Click="btnLogout_click" Width="146">
+                                    <DockPanel Width="220" Margin="20,0,0,0" >
+                                        <Image Source="C:\Users\ÇİĞDEM\Source\Repos\Raporlama\Raporlama.Dekstop\Images\icons\logout.png" Width="32" />
+                                        <Label Content="Çıkış" Foreground="White" FontSize="20" x:Name="lbl_logout"/>
+                                    </DockPanel>
+                                </Button>
+                            </Border>
+
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <Border Background="#134187" Grid.Column="0" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="170"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel HorizontalAlignment="Left">
+                    <Button Height="65" Background="{x:Null}"  x:Name="menuButtonFinans" Click="btnFinans_click">
+                        <DockPanel Width="220" Margin="15,0,0,0" >
+                            <Image Source="C:\Users\ÇİĞDEM\Source\Repos\Raporlama\Raporlama.Dekstop\Images\icons\stats.png" Width="32" />
+                            <Label Content="Finans" Foreground="White" FontSize="20" x:Name="lbl_menu1"/>
+                        </DockPanel>
+                    </Button>
+                    <Button Height="60" Background="{x:Null}"  x:Name="menuButtonMuhasebe" Click="btnMuhasebe_click">
+                        <DockPanel Width="220" Margin="15,0,0,0">
+                            <Image Source="/Images/icons/report.png" Width="32" />
+                            <Label Content="Muhasebe" Foreground="White" FontSize="20" x:Name="lbl_menu2"/>
+                        </DockPanel>
+                    </Button>
+                    <Button Height="60" Background="{x:Null}"  x:Name="menuButtonSatinalma" Click="btnSatinalma_click">
+                        <DockPanel Width="220" Margin="15,0,0,0">
+                            <Image Source="C:\Users\ÇİĞDEM\Source\Repos\Raporlama\Raporlama.Dekstop\Images\icons\handshake.png" Width="32" />
+                            <Label Content="Satın Alma" Foreground="White" FontSize="20" x:Name="lbl_menu3"/>
+                        </DockPanel>
+                    </Button>
+                    <Button Height="60" Background="{x:Null}"  x:Name="menuButtonSatis" Click="btnSatis_click">
+                        <DockPanel Width="220" Margin="15,0,0,0">
+                            <Image Source="C:\Users\ÇİĞDEM\Source\Repos\Raporlama\Raporlama.Dekstop\Images\icons\planning.png" Width="32" />
+                            <Label Content="Satış" Foreground="White" FontSize="20" x:Name="lbl_menu4" FontFamily="Arial"/>
+                        </DockPanel>
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.Row="1">
+
+                    <Canvas>
+                        <Border Canvas.Left="30" Canvas.Top="99" CornerRadius="10,10,10,10" Cursor="Hand">
+                            <Border.Style>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Background" Value="#99053D76"/>
+
+                                </Style>
+                            </Border.Style>
+                            <Label Content="Raporlarınız Listeleniyor" Foreground="white" Width="150" VerticalAlignment="Bottom"
+                               HorizontalAlignment="Right"/>
+                        </Border>
+                    </Canvas>
+                    <Image Source="/Images/ListImage/altpencere.png" Height="247" x:Name="lbl_altpencere" Panel.ZIndex="-99"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="1" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="1">
+                    <StackPanel Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <DataGrid x:Name="dtgReport" FontSize="20"
+                          SelectionMode="Single" AutoGenerateColumns="False"
+                          AlternatingRowBackground="Azure" Foreground="#134187" FontFamily="Arial">
+                            <DataGrid.Columns >
+                                <DataGridTextColumn Binding="{Binding Id}" Header="Rapor Id" IsReadOnly="True" Width="250" />
+                                <DataGridTextColumn Binding="{Binding Name}" Header="Rapor Adı" IsReadOnly="True" Width="250"/>
+                                <DataGridTextColumn Binding="{Binding ReportType.Name}" Header="Rapor Türü" IsReadOnly="True" Width="250"/>
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+        </Border>
+
+    </Grid>
+</Window>
